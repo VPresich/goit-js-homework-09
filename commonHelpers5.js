@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                      */import{S as e}from"./assets/vendor-c279a850.js";import{c as o,i as t}from"./assets/gallery-images-d2b92588.js";const a=document.querySelector(".gallery");o(t,a);new e(".gallery a",{captionsData:"alt",captionPosition:"bottom",captionsDelay:250,captionType:"attr",showCounter:!0,disableScroll:!1,disableZoom:!1,history:!0,swipeClose:!0});
+//# sourceMappingURL=commonHelpers5.js.map
