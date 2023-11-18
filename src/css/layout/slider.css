@@ -1,5 +1,5 @@
 .slider-container {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -8,9 +8,9 @@
 
 .slider-buttons {
   display: flex;
-  column-gap: 32px;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;  
 }
 
 .slider-button {
@@ -18,8 +18,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110px;
-  height: 42px;
+  width: 80px;
+  height: 30px;   
   font-weight: 600;
   font-size: 14px;
   line-height: 1.25;
@@ -55,9 +55,7 @@
 }
 
 .slider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  display: none;  
 }
 
 .slider-counter{  
@@ -91,4 +89,31 @@
 
 .active-dot {
   background-color: var(--button-accent-bgr-color);
+}
+#closeBtn{
+  display: none;
+}
+
+@media screen and (min-width: 678px) {
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .slider-button {   
+    width: 110px;
+    height: 42px;   
+  }
+  .slider-buttons {   
+    gap: 32px;  
+  }
+
+}
+
+@media screen and (min-width: 1112px) {  
+
+  #closeBtn{
+    display: inline-flex;
+  }
 }

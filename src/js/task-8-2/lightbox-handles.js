@@ -33,7 +33,7 @@ function onImageClick(event) {
 function openModalWindow({ src, alt }) {  
 
   modalWindowRef = basicLightbox.create(
-    `<div class="lightbox-modal ">   
+    `<div class="lightbox-modal">   
         <img class="lightbox-image" src="${src}" alt="${alt}"/>           
     </div>`,
     {
