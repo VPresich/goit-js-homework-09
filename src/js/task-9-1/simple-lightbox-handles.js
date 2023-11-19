@@ -1,8 +1,8 @@
 import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-import iconsUrl from '../../img/icons.svg';
+import 'simplelightbox/dist/simple-lightbox.min.css'; 
 
-import '../../css/layout/simple-lightbox-window.css';
+import '../../css/layout/simple-lightbox-window.css'; // my styles for customizing 
+import iconsUrl from '../../img/icons.svg';
 
 import createGallery from './simple-lightbox-gallery.js';
 import images from '../data/gallery-images.js';
@@ -11,7 +11,6 @@ const galleryRef = document.querySelector('.gallery');
 createGallery(images, galleryRef);
 
 new SimpleLightbox('.gallery a', {   
-
   captionsData: 'alt',
   captionPosition: 'bottom',
   captionsDelay: 250,
@@ -42,7 +41,8 @@ new SimpleLightbox('.gallery a', {
   </svg>`,
 
   enableKeyboard: true,
-
   showCounter: true,
+  animationSlide: true,
+  loop: true,
 });
 

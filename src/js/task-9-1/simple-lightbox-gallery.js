@@ -9,7 +9,9 @@ const imageMarkup = ({ preview, description, original }) => {
             </li>`;
   }
   
-  export default function createGallery(images, galleryRef) {
+  function createGallery(images, galleryRef) {
     const imagesMarkup = images.map(imageMarkup).join('');
     galleryRef.insertAdjacentHTML("beforeend", imagesMarkup);
   }
+
+  export default createGallery;
