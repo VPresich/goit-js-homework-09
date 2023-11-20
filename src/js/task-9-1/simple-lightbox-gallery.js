@@ -1,5 +1,5 @@
 const imageMarkup = ({ preview, description, original }) => {
-    return `<li class="gallery-item">
+  return `<li class="gallery-item">
               <a class="gallery-link" href="${original}">
                 <img class="gallery-img"
                     src="${preview}"
@@ -7,11 +7,11 @@ const imageMarkup = ({ preview, description, original }) => {
                  />
               </a>
             </li>`;
-  }
-  
-  function createGallery(images, galleryRef) {
-    const imagesMarkup = images.map(imageMarkup).join('');
-    galleryRef.insertAdjacentHTML("beforeend", imagesMarkup);
-  }
+};
 
-  export default createGallery;
+function createGallery(images, galleryRef) {
+  const imagesMarkup = images.map(imageMarkup).join('');
+  galleryRef.insertAdjacentHTML('beforeend', imagesMarkup);
+}
+
+export default createGallery;

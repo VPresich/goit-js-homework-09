@@ -1,10 +1,9 @@
-
 import * as basicLightbox from 'basiclightbox';
-import "basiclightbox/dist/basicLightbox.min.css";
+import 'basiclightbox/dist/basicLightbox.min.css';
 
 import { KEY_CODE_ESC } from '../common/constants.js';
 import createGallery from '../common/create-gallery.js';
-import images from "../data/gallery-images.js";
+import images from '../data/gallery-images.js';
 
 import LightboxSliderInterface from './lightbox-slider-interface.js';
 import iconsUrl from '../../img/icons.svg';
@@ -17,29 +16,28 @@ let modalWindowRef = null;
 
 function onImageClick(event) {
   const targetRef = event.target;
-  const isImageRef = targetRef.classList.contains("gallery-img");
+  const isImageRef = targetRef.classList.contains('gallery-img');
   if (!isImageRef) {
     return;
   }
   event.preventDefault();
 
-  const closestLi = targetRef.closest(".gallery-item");
+  const closestLi = targetRef.closest('.gallery-item');
   const listImages = event.currentTarget.children;
   const indexList = Array.from(listImages).indexOf(closestLi);
 
   openModalWindow(listImages, indexList);
 }
 
-
 function openModalWindow(listImages, indexList) {
   modalWindowRef = basicLightbox.create(createLightboxMarkup(), {
-    onShow: (instance) => {
-      document.addEventListener("keydown", onKeydown);
+    onShow: instance => {
+      document.addEventListener('keydown', onKeydown);
 
       const lightboxCloseBtn = instance
         .element()
-        .querySelector(".lightbox-close");
-      lightboxCloseBtn.addEventListener("click", instance.close);
+        .querySelector('.lightbox-close');
+      lightboxCloseBtn.addEventListener('click', instance.close);
 
       const lightboxSlider = new LightboxSliderInterface(
         indexList,
@@ -47,8 +45,8 @@ function openModalWindow(listImages, indexList) {
         instance
       );
     },
-    onClose: (instance) => {
-      document.removeEventListener("keydown", onKeydown);
+    onClose: instance => {
+      document.removeEventListener('keydown', onKeydown);
     },
     closable: true,
   });

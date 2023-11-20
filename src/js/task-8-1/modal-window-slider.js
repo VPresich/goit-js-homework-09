@@ -1,4 +1,4 @@
-import SliderInterface from "../common/slider-interface.js";
+import SliderInterface from '../common/slider-interface.js';
 
 class ModalWindowSlider extends SliderInterface {
   #sliderContent;
@@ -20,7 +20,7 @@ class ModalWindowSlider extends SliderInterface {
 
   updateContent() {
     const slideNumber = super.getCurrentSlide();
-    const imgRef = this.#elementsList[slideNumber].querySelector("img");
+    const imgRef = this.#elementsList[slideNumber].querySelector('img');
 
     this.#sliderContent.src = imgRef.dataset.source;
     this.#sliderContent.alt = imgRef.alt;

@@ -64,10 +64,11 @@
   background-color: var(--button-accent-bgr-color);
 }
 
-.modal-content {  
-  height: 640px;
+.modal-content { 
+  max-width: 1112px; 
+  height: 600px;
   object-fit: cover;
-  width: 100%;  
+  /* width: 100%;   */
 }
 
 @media screen and (min-width: 768px) {  

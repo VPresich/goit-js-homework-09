@@ -44,5 +44,7 @@ new SimpleLightbox('.gallery a', {
   showCounter: true,
   animationSlide: true,
   loop: true,
+  widthRatio: 0.85,
+  heightRatio: 0.9,
 });
 
