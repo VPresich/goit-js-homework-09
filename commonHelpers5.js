@@ -5,7 +5,7 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
                     alt="${t}"                    
                  />
               </a>
-            </li>`;function s(e,t){const i=e.map(l).join("");t.insertAdjacentHTML("beforeend",i)}const n=document.querySelector(".gallery");s(r,n);new a(".gallery a",{captionsData:"alt",captionPosition:"bottom",captionsDelay:250,nav:!0,navText:[`<svg
+            </li>`;function s(e,t){const i=e.map(l).join("");t.insertAdjacentHTML("beforeend",i)}const n=document.querySelector(".gallery");s(r,n);new a(".gallery a",{captionsData:"alt",captionPosition:"bottom",captionDelay:250,nav:!0,navText:[`<svg
     class="lightbox-button-icon-prev"
     width="24"
     height="24"
