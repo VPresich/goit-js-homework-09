@@ -1,7 +1,7 @@
 import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css'; 
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import '../../css/layout/simple-lightbox-window.css'; // my styles for customizing 
+import '../../css/layout/simple-lightbox-window.css'; // my styles for customizing
 import iconsUrl from '../../img/icons.svg';
 
 import createGallery from './simple-lightbox-gallery.js';
@@ -10,14 +10,14 @@ import images from '../data/gallery-images.js';
 const galleryRef = document.querySelector('.gallery');
 createGallery(images, galleryRef);
 
-new SimpleLightbox('.gallery a', {   
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionPosition: 'bottom',
-  captionsDelay: 250,
+  captionDelay: 250,
 
   nav: true,
   navText: [
-  `<svg
+    `<svg
     class="lightbox-button-icon-prev"
     width="24"
     height="24"
@@ -25,7 +25,7 @@ new SimpleLightbox('.gallery a', {
       <use href="${iconsUrl}#icon-chevron-left"></use>
   </svg>`,
 
-  `<svg
+    `<svg
     class="lightbox-button-icon-next"
     width="24"
     height="24"
@@ -47,4 +47,3 @@ new SimpleLightbox('.gallery a', {
   widthRatio: 0.85,
   heightRatio: 0.9,
 });
-
